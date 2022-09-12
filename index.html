@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width">
+    <!-- [if it IE 9]-->
+    <script src="https://oss.maxcd.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <!-- responsive الخاصة بال  media query مفيد في حالة ال -->
+    <script src="https://oss.maxcd.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/modifiedCssFile.css">
+    <link rel="stylesheet" href="css/mediaQueryStyle.css">
+    <link rel="stylesheet" href="css/defaultColorTheme.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+
+<body>
+    <!--************************************* Start option Box Section *****************************************-->
+    <!-- +++++++++++++ start option Box Section +++++++++++++ -->
+    <section class="optionBoxClass">
+        <!--************ هذا الديف هحط الالوان اللي هختار بينهم *************-->
+        <div class="colorBox">
+            <h4>Color Option</h4>
+            <!-- دي القائمة الخاصة بالالون -->
+            <ul class="list-unstyled">
+                <li data-value="css/defaultColorTheme.css"></li>
+                <!--الاول اللي بيخلي العناصر لونها احمر styleده ملف ال -->
+                <li data-value="css/purpleColorTheme.css"></li>
+                <!--الثاني اللي بيخلي العناصر لونها باربل  style ده ملف ال -->
+                <li data-value="css/blueColorTheme.css"></li>
+                <!--الثالث اللي بيخلي العناصر لونها ازرق فاتح  styleده ملف ال -->
+                <li data-value="css/orangeColorTheme.css"></li>
+                <!--الرابع اللي بيخلي العناصر لونها برتقالي styleده ملف ال -->
+            </ul>
+        </div>
+        <!--وهعطيه اسم كلاس خاص بيه عشان اعرف انسقه عشان التنسيق اما اعمله لا يتم تطبيقه علي كل الايقونات font-awesome من مكتبة الgear هعمل ايقونة اسمها -->
+        <i class="fa fa-gear fa-3x gearCheck "></i>
+    </section>
+    <!--************************************* End option Box Section *****************************************-->
+    <!-- ******************************************* lesson11,12 Start the navbar ************************* -->
+    <nav class="navbar navbar-inverse navbar-fixed-top " data-target="#ourNavbar" role="navigation">
+        <!-- النافبار واخد كل عرض الصفحة وهو اللي بيمثل الخط الشريط الاسود بتاع النافبار  -->
+        <div class="container">
+            <!-- frameWork واخذ ال 1170 من عرض الصفحة اللي هوه عرض ال -->
+            <!-- The header of navbar -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#ourNavbar">
+                    <!-- Toggle هذان الخاصيتين هما اللي بيخلوا الزرار يشتغل ويعمل data-target , data-toggle ده الزرار اللي بيفتح لي النافبار في الموبيل حيث ال  -->
+
+                    <!--عبارة عن الثلاث خطوط اللي تحتي بعض في الزرار اللي بيكون في اقصي يمين الشاشة في حالة الموبيل -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">ElTokhey<span>.Inc</span></a> <!-- بيكون فيه اسم موقعك -->
+            </div>
+            <!--collect the nav links , forms , and other content for toggling-->
+            <div class="collapse navbar-collapse" id="ourNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- فهيزود لي لينك جديد في النافبار  <li> </li> لو عايز اضيف لينك جديد فبزود -->
+                    <li class="active"> <a href="about.html" target="_blank">home</a> </li>
+                    <li> <a href="about.html" target="_blank">about</a> </li>
+                    <!-- about.html هيوديني about لما اضغط علي اللينك اللي اسمه  -->
+                    <li> <a href="#">fQA</a></li> <!-- FAQ : Frequently Asked Question الاسئلة اللي بتتسال كتير -->
+                    <li> <a hre="#">map</a> </li>
+                    <li><a hre="#">map</a></li>
+                    <li><a hre="#">contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li> <a href="#">item1</a> </li>
+                            <li> <a href="#">item2</a> </li>
+                            <li> <a href="#">item3</a> </li>
+                            <li class="divider"></li> <!-- list items بيعمل خط فاصل بين عدد من ال -->
+                            <li> <a href="#">item4</a> </li>
+                            <li> <a href="#">item5</a> </li>
+                            <li class="divider"></li> <!-- list items بيعمل خط فاصل بين عدد من ال -->
+                            <li> <a href="#">item6</a> </li>
+                            <li> <a href="#">item7</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown2<span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li> <a href="#">item10</a> </li>
+                            <li> <a href="#">item20</a> </li>
+                            <li> <a href="#">item30</a> </li>
+                            <li> <a href="#">item40</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">item50</a> </li>
+                            <li> <a href="#">item60</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="#">item70</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- End of container -->
+    </nav>
+    <!-- End of Navbar -->
+    <!--  **************************** lsesson13  caruosel عرض خيالة :  start of SlideShow *********************** -->
+    <!--  كل حاجة بتودي عليه id هذا ال id=myCarousel حيث ال-->
+    <div id="myCarousel" class="carousel slide wow bounceIn " data-ride="carousel" data-wow-duration="0.5s"
+        data-wow-delay="1s">
+        <!-- يعني النقاط والدوائر الصغيرة indicators اللي بيكون بداخله الصور وال slider بتاع ال container عبارة عن ال -->
+        <!-- Indicators  : 
+     عبارة عن عدد من النقاط بتكون موجودة اسفل منتصف الصفحة حيث بيكون عددها بيساوي عدد الصور حيث لما بضغط عليها بينقلني بين الصور وبعضها
+      اللي موجود في الالقائمة المرتبه  myCarousel  اللي اسمه id حيث لما ادوس علي اي دائرة فهيوديني لل
+    -->
+        <ol class="carousel-indicators">
+            <!--الدائرة الاولي -->
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <!-- ده الدائرة اللي بتكون متظلل متلونة -->
+            <!--الدائرة الثانية -->
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- الدائرة الثالثة -->
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <!--الدائرة الرابعة -->
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides ده الغلاف بتاع السليدر -->
+        <div class="carousel-inner">
+            <!-- slider بتاع الصور بتاعت ال container هذا هو ال -->
+            <!-- ********************************* كل صورة هحطها في ديف لوحدها ************************************** -->
+            <!-- بتاعها caption الصورة الاولي وال -->
+            <div class="item active">
+                <img src="images/egypt-visit-8.jpg" alt="picture#1">
+                <div class="carousel-caption hidden-xs">
+                    <!-- header and paragraph ده العنوان الصورة اللي بيتم وضعه تحت الصورة الرابعة هيكون عبارة عن  -->
+                    <h1>Programming</h1>
+                    <p>
+                        This is famous words said by famous man This is famous words said by famous man This is famous
+                        words said by famous man This is famous words said by famous man This is famous words said by
+                        famous man This is famous words said by famous man This is famous words said by famous man This
+                        is famous words said by famous man This is famous words said by famous man This is famous words
+                        said by famous man This is famous words said by famous man This is famous words said by famous
+                        man
+                    </p>
+                    <button class="btn btn-primary">Read More</button>
+                    <button class="btn btn-danger">Buy Now</button>
+                </div>
+            </div>
+            <!-- بتاعه caption الصورة الثانية وال  -->
+            <div class="item">
+                <img src="images/pyramids.jpg" alt="picture#2">
+                <div class="carousel-caption hidden-xs">
+                    <!-- header and paragraph ده العنوان الصورة اللي بيتم وضعه تحت الصورة الرابعة هيكون عبارة عن  -->
+                    <h1>Web design</h1>
+                    <p>This is famous words said by famous man This is famous words said by famous man This is famous
+                        words said by famous man This is famous words said by famous man This is famous words said by
+                        famous man This is famous words said by famous man This is famous words said by famous man This
+                        is famous words said by famous man This is famous words said by famous man This is famous words
+                        said by famous man This is famous words said by famous man This is famous words said by famous
+                        man
+                    </p>
+                    <button class="btn btn-primary">Read More</button>
+                    <button class="btn btn-danger">Buy Now</button>
+                </div>
+            </div>
+            <!-- بتاعها caption الصورة الثالثة وال  -->
+            <div class="item">
+                <img src="images/flowera.jpg" alt="picture#3">
+                <div class="carousel-caption hidden-xs">
+                    <!-- header and paragraph ده العنوان الصورة اللي بيتم وضعه تحت الصورة الثالثة هيكون عبارة عن  -->
+                    <h1>Machine Learning</h1>
+                    <p>This is famous words said by famous man This is famous words said by famous man This is famous
+                        words said by famous man This is famous words said by famous man This is famous words said by
+                        famous man This is famous words said by famous man This is famous words said by famous man This
+                        is famous words said by famous man This is famous words said by famous man This is famous words
+                        said by famous man This is famous words said by famous man This is famous words said by famous
+                        man
+                    </p>
+                    <button class="btn btn-primary ">Read More</button>
+                    <button class="btn btn-danger">Buy Now</button>
+                </div>
+            </div>
+            <!-- بتاعها caption  الصورة الرابعة وال -->
+            <div class="item">
+                <img src="images/mosque.jpg" alt="picture#4">
+                <!--
+       hidden-xs كلاس اسمه caption فهعطي ال Extra small = xs في حالة الشاشات ال caption بيختفي في الاعلي فعايز اخفي ال caption فيه مشكلة في حالة تصغير الشاشة حيث ال
+     ثم نوع الشاشة  hidden فالو عايز اخفي عناصر او حاجة معينة في اي نوع من انواع الشاشات فبزود اسم كلاس جديد وبكتب كلمة 
+    class="class1 .... hidden-screenType"
+    -->
+                <div class="carousel-caption hidden-xs hidden-xs">
+                    <!-- header and paragraph ده العنوان الصورة اللي بيتم وضعه تحت الصورة الرابعة هيكون عبارة عن  -->
+                    <h1>Artifical Intelligence</h1>
+                    <p>This is famous words said by famous man This is famous words said by famous man This is famous
+                        words said by famous man This is famous words said by famous man This is famous words said by
+                        famous man This is famous words said by famous man This is famous words said by famous man This
+                        is famous words said by famous man This is famous words said by famous man This is famous words
+                        said by famous man This is famous words said by famous man This is famous words said by famous
+                        man
+                    </p>
+                    <button class="btn btn-primary">Read More</button>
+                    <button class="btn btn-danger">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <!-- chevron-left واسم الايقونة هي glyphicon من ال icon font ده السهم اللي بيكون علي الشمال اللي بيعرض الصور من الشمال لليمين والسهم عبارة عن  -->
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <!--chevron-right واسم الايقونة هي glyphicon من ال icon font ده السهم اللي بيكون علي الشمال اللي بيعرض الصور من اليمين للشمال  والسهم عبارة عن -->
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--***************************** End of SlideShow ***************************** -->
+    <!--************************************** Lesson15 : About section *****************************************
+            هبدا اقسم النافبار لسكاشن والسكشن هوه هوه الديف فاللي عايز يستخدم التاج اللي اسمه سكشن يستخدمه واللي عايز يستخدم التاج اللي اسمه ديف يستخدمه 
+        -->
+    <!-- ******************************* start About section  ********************************** -->
+
+    <section class="about text-center">
+        <!--  
+                  في المنتصف section اللي في ال paragraph  هذا الكلاس جاهز في البوتستراب بيخلي ال paragraph اللي في التاج اللي اسمه text-center الكلاس اللي اسمه  
+                                             في الشاشة الصغيرة  h4 وهظهر ال  h1 حجمه كبير في الشاشات الصغيرة فهخفي ال h1 اللي اسمه headerوخلي بالك اني ال
+            -->
+
+        <h1 class="hidden-xs">Visit Our New Template <span>ELTokhey.Inc</span></h1>
+        <h4 class="visible-xs">Visit Our New Template <span>ELTokhey.Inc</span></h4>
+        <!-- وهخلي الكلمة اللي اسمها بوتستراب ظهره وعريضة  css شكله كويس وده بيوفر عليا كتابة خواص paragraph ده كلاس جاهز في البوتستراب بيخلي شكل ال lead الكلاس اللي اسمه -->
+        <p class="lead">Hello Let Me Present Our New Template ELTokhey Inc. Created With All love of
+            <strong>Bootstrap</strong> 3.3.7
+        </p>
+    </section>
+    <!--************************************** Lesson16 : start Features section المميزات بتاعت الموقع ****************************-
+         وهو ال1170 بيكسل وبيمكني من تقسيم الصف الي 12 صف framework لان بيخلني اشتغل في العرض بتاع ال Grid system هستخدم هنا ال
+      -->
+    <section class="features text-center">
+        <!-- عشان اخلي محتوي السكشن في المنتصف -->
+        <!-- لاني هحط اربع مميزات وهقسمهم حسب نوع الشاشة -->
+        <div class="container">
+            <h1>Our Features</h1>
+            <div class="row">
+                <!-- paragraph وتحتها ال feature  كل ديف هيكون عبارة عن اسبام وده اللي هحط فيها الايقونة وهيكون فيه عنوان ال -->
+                <!-- المنتج الاول  -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="feat">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <!-- حيث بكتب في الكلاس اسم الكلاس ثم اسم الايقونة  glyphiconهحط ايقونة من ال-->
+                        <h4>100% Responsive</h4>
+                        <p>Brackets has some unique features like Quick Edit, Live Preview and others that you may not
+                            find in other editors. Brackets is written in JavaScript, HTML and CSS. That means that
+                            have the skills necessary to modify and extend the editor. In fact, we use Brackets every
+                            day
+                        </p>
+                    </div>
+                </div>
+                <!-- المنتج الثاني  -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="feat">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                        <!-- حيث بكتب في الكلاس اسم الكلاس ثم اسم الايقونة  glyphiconهحط ايقونة من ال-->
+                        <h4>Retina Ready</h4>
+                        <p>Brackets has some unique features like Quick Edit, Live Preview and others that you may not
+                            find in other editors. Brackets is written in JavaScript, HTML and CSS. That means that
+                            have the skills necessary to modify and extend the editor. In fact, we use Brackets every
+                            day
+                        </p>
+                    </div>
+                </div>
+                <!-- المنتج الثالث  -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="feat">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                        <!-- حيث بكتب في الكلاس اسم الكلاس ثم اسم الايقونةglyphiconهحط ايقونة من ال -->
+                        <h4>Awesome Display</h4>
+                        <p>Brackets has some unique features like Quick Edit, Live Preview and others that you may not
+                            find in other editors. Brackets is written in JavaScript, HTML and CSS. That means that
+                            have the skills necessary to modify and extend the editor. In fact, we use Brackets every
+                            day
+                        </p>
+                    </div>
+                </div>
+                <!-- المنتج الرابع  -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="feat">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <!-- حيث بكتب في الكلاس اسم الكلاس ثم اسم الايقونة  glyphiconهحط ايقونة من ال-->
+                        <h4>Well Documented</h4>
+                        <p>Brackets has some unique features like Quick Edit, Live Preview and others that you may not
+                            find in other editors. Brackets is written in JavaScript, HTML and CSS. That means that
+                            have the skills necessary to modify and extend the editor. In fact, we use Brackets every
+                            day
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--************************************** Less,on16 : End Features section *****************************************-->
+    <!--*********** Lesson16 : Start testimonials carousel section  اراء الناس عن الموقع *******************************
+    testimonials اللي في ال indicators اللي فوق مياثرش علي ال indicators  عشان لما اقلب في ال indicators بتاعت ال id بس هغير اسماء ال carousel هيكون نفس كود ال  
+        -->
+    <section class="testimonials text-center">
+        <!-- عشان اخلي الكلام اللي داخل السكشن يكون في المنتصف -->
+        <div class="container">
+            <!--start container-->
+            <h1>What our Clients says </h1>
+            <div id="carousel_testimonials" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides ده الغلاف بتاع السليدر -->
+                <div class="carousel-inner">
+                    <!-- slider بتاع الصور بتاعت ال container هذا هو ال -->
+                    <!-- ********************************* كل صورة هحطها في ديف لوحدها ************************************** -->
+                    <!-- بتاعها caption الصورة الاولي وال -->
+                    <div class="item active">
+                        <p class="lead">
+                            Welcome to Brackets, a modern open-source code editor that understands web design.Welcome to
+                            Brackets, a modern open-source code editor that understands web design.
+                        </p>
+                        <!--هحط فيه اسم الشخص اللي قال رايه عن الموقع -->
+                        <span>Mahmoud ELTokhey</span>
+                    </div>
+                    <!--بتاعه ا caption الصورة الثانية وال  -->
+                    <div class="item">
+                        <p class="lead">
+                            Welcome to Brackets, a modern open-source code editor that understands web design.Welcome to
+                            Brackets, a modern open-source code editor that understands web design.
+                        </p>
+                        <!--هحط فيه اسم الشخص اللي قال رايه عن الموقع -->
+                        <span>Ahmed ELTokhey</span>
+                    </div>
+                    <!-- بتاعها caption الصورة الثالثة وال  -->
+                    <div class="item">
+                        <p class="lead">
+                            Welcome to Brackets, a modern open-source code editor that understands web design.Welcome to
+                            Brackets, a modern open-source code editor that understands web design.
+                        </p>
+                        <!--هحط فيه اسم الشخص اللي قال رايه عن الموقع -->
+                        <span>Shimma ELTokhey</span>
+                    </div>
+
+                    <!-- بتاعها caption  الصورة الرابعة وال -->
+                    <div class="item">
+                        <p class="lead">
+                            Welcome to Brackets, a modern open-source code editor that understands web design.Welcome to
+                            Brackets,
+                            modern open-source code editor that understands web design.
+                        </p>
+                        <!--هحط فيه اسم الشخص اللي قال رايه عن الموقع -->
+                        <span>Eman ELTokhey</span>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <!-- صورة li الدائرة الاولي هحط صورة بدل الدائرة حيث هحط داخل ال -->
+                    <li data-target="#carousel_testimonials" data-slide-to="0" class="active">
+                        <!--  ده الدائرة اللي بتكون متظلل متلونة كوضع ابتدائي  -->
+                        <img src="images/login.png" alt="pic#1">
+                    </li>
+                    <!-- صورة li  الدائرة الثانية هحط صورة بدل الدائرة حيث هحط داخل ال -->
+                    <li data-target="#carousel_testimonials" data-slide-to="1">
+                        <img src="images/login.png" alt="pic#2">
+                    </li>
+                    <!-- صورة li  الدائرة الثالثة هحط صورة بدل الدائرة حيث هحط داخل ال -->
+                    <li data-target="#carousel_testimonials" data-slide-to="2">
+                        <img src="images/login.png" alt="pic#3">
+                    </li>
+                    <!-- صورة li  الدائرة الرابعة هحط صورة بدل الدائرة حيث هحط داخل ال -->
+                    <li data-target="#carousel_testimonials" data-slide-to="3">
+                        <img src="images/login.png" alt="pic#4">
+                    </li>
+                </ol>
+            </div>
+            </ div>
+            <!--End container-->
+    </section>
+    <!--****************************************** Lesson16 : End testimonials section *************************-->
+    <!-- ***************************************** lesson20 : start price table section *************************************** -->
+    <section class="tableSection  text-center">
+        <!-- text-center عشان محتوي السكشن يكون في المنتصف هضيف كلاس جاهز اسمه -->
+        <!-- عشان احط المحتوي بتاعي في عرض 1170 -->
+        <div class="container">
+            <h1>Our Amazing prices</h1>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <!-- هحط فيه عنوان الخطة والسعر وقائمة بالمميزات بتاعت الخطة-->
+                    <div class="price_box">
+                        <!-- btn-primary بيخلي لون الكلاس نفس لون الزرار اللي الكلاس بتاعه اسمه text-primary عايز اخلي لون العنوان نفس لون الزرار فعندنا كلاس اسمه -->
+                        <h1 class=" text-primary">Hosting</h1>
+                        <p class="center-block">$100</p> <!-- box يخلني احط السعر في منتصف ال -->
+                        <ul class="list-unstyled">
+                            <!--padding-left:0 وال list-style:none حيث بيخلي ال  list-unstyled فعندي كلاس جاهز اسمه <ul></ul> بتاع ال style عشان اخلي ال-->
+                            <li>space : 30GB</li>
+                            <li>Emails : 20</li>
+                            <li>IPs : 2 IP</li>
+                            <li>Databases : 10</li>
+                            <li>Ftp Accounts : 5</li>
+                        </ul>
+                        <!--حيث ده احد انواع الزراير btn-primary حيث بيعبر عن الزرار الاصلي والاسم الثاني للكلاس  btn هعمل زرار جاهز حيث الاسم الاول للكلاس هو -->
+                        <a href="#" class="btn btn-primary">Order Now </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <!-- هحط فيه عنوان الخطة والسعر وقائمة بالمميزات بتاعت الخطة-->
+                    <div class="price_box">
+                        <!-- btn-success بيخلي لون الكلاس نفس لون الزرار اللي الكلاس بتاعه اسمه text-success عايز اخلي لون العنوان نفس لون الزرار فعندنا كلاس اسمه -->
+                        <h1 class="text-success">VPS</h1>
+                        <!--Virtual private server خادم وهمي -->
+                        <p class="center-block">$150</p> <!-- عايز احط السعر داخل دائرة  -->
+                        <!-- box يخلني احط السعر في منتصف ال -->
+                        <ul class="list-unstyled">
+                            <!--padding-left:0 وال list-style:none حيث بيخلي ال  list-unstyled فعندي كلاس جاهز اسمه <ul></ul> بتاع ال style عشان اخلي ال-->
+                            <li>space : 30GB</li>
+                            <li>Emails : 20</li>
+                            <li>IPs : 2 IP</li>
+                            <li>Databases : 10</li>
+                            <li>Ftp Accounts : 5</li>
+                        </ul>
+                        <!--حيث ده احد انواع الزراير btn-primary حيث بيعبر عن الزرار الاصلي والاسم الثاني للكلاس  btn هعمل زرار جاهز حيث الاسم الاول للكلاس هو -->
+                        <a href="#" class="btn btn-success">Order Now </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <!-- هحط فيه عنوان الخطة والسعر وقائمة بالمميزات بتاعت الخطة-->
+                    <div class="price_box">
+                        <!-- btn-info بيخلي لون الكلاس نفس لون الزرار اللي الكلاس بتاعه اسمه text-info عايز اخلي لون العنوان نفس لون الزرار فعندنا كلاس اسمه -->
+                        <h1 class="text-info">Dedicated</h1>
+                        <p class="center-block">$250</p> <!-- box يخلني احط السعر في منتصف ال -->
+                        <ul class="list-unstyled">
+                            <!--padding-left:0 وال list-style:none حيث بيخلي ال  list-unstyled فعندي كلاس جاهز اسمه <ul></ul> بتاع ال style عشان اخلي ال-->
+                            <li>space : 30GB</li>
+                            <li>Emails : 20</li>
+                            <li>IPs : 2 IP</li>
+                            <li>Databases : 10</li>
+                            <li>Ftp Accounts : 5</li>
+                        </ul>
+                        <!--حيث ده احد انواع الزراير btn-primary حيث بيعبر عن الزرار الاصلي والاسم الثاني للكلاس  btn هعمل زرار جاهز حيث الاسم الاول للكلاس هو -->
+                        <a href="#" class="btn btn-info">Order Now </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                    <!-- هحط فيه عنوان الخطة والسعر وقائمة بالمميزات بتاعت الخطة-->
+                    <div class="price_box">
+                        <!-- btn-danger بيخلي لون الكلاس نفس لون الزرار اللي الكلاس بتاعه اسمه text-danger عايز اخلي لون العنوان نفس لون الزرار فعندنا كلاس اسمه -->
+                        <h1 class="text-danger">Cloud</h1>
+                        <p class="center-block">$300</p> <!-- box يخلني احط السعر في منتصف ال -->
+                        <ul class="list-unstyled">
+                            <!--padding-left:0 وال list-style:none حيث بيخلي ال  list-unstyled فعندي كلاس جاهز اسمه <ul></ul> بتاع ال style عشان اخلي ال-->
+                            <li>space : 30GB</li>
+                            <li>Emails : 20</li>
+                            <li>IPs : 2 IP</li>
+                            <li>Databases: 10</li>
+                            <li>Ftp Accounts : 5</li>
+                        </ul>
+                        <!--حيث ده احد انواع الزراير btn-primary حيث بيعبر عن الزرار الاصلي والاسم الثاني للكلاس  btn هعمل زرار جاهز حيث الاسم الاول للكلاس هو -->
+                        <a href="#" class="btn btn-danger">Order Now </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***************************************** End price table section *************************************** -->
+
+    <!-- ***************************************** start our Team section **************************************** -->
+    <section class="ourTeam text-center">
+        <!-- عشان اخلي الكلام اللي داخل السكشن في منتصف السكشن -->
+        <div class="inside_container">
+            <div class="container">
+                <!-- هيكون عندي الفريق مكون 4 اشخاص  -->
+                <h3>Meet Our Awesome Team</h3>
+                <!-- Grid system عشان يقسم الصف الي  row هحط اراء اربع اشخاص فبالتالي هعمل ديف اسمه -->
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 ">
+                        <div class="person">
+                            <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                            <img class="img-circle" src="images/Nile1.jpg" alt="NileImage">
+                            <!-- هحط فيه اسم الشخص اللي قال رايه عن الموقع h3 فهعمل  -->
+                            <h3>Ahmed ElTokhey</h3>
+                            <!-- هكتب فيه نبذه عن كل شخص <p> هعمل -->
+                            <p>This is Ahmed ELTokhey who is the amazing Hackers with much knowledge in hacking </p>
+                            <!-- **************************** font-awesome icons ************************** -->
+                            <i class="fa fa-google fa-2x"></i>
+                            <i class="fa fa-facebook-square fa-2x"></i>
+                            <i class="fa fa-instagram fa-2x"></i>
+                            <i class="fa fa-youtube-square fa-2x"></i>
+                            <i class="fa fa-twitter-square fa-2x"></i>
+                            <i class="fa fa-google-plus-square fa-2x"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="person">
+                            <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                            <img class="img-circle" src="images/Nile1.jpg" alt="NileImage">
+                            <!-- هحط فيه اسم الشخص اللي قال رايه عن الموقع h3 فهعمل  -->
+                            <h3>Mahmoud ElTokhey</h3>
+                            <!-- هكتب فيه نبذه عن كل شخص <p> هعمل -->
+                            <p>This is Ahmed ELTokhey who is the amazing Hackers with much knowledge in hacking </p>
+                            <!-- **************************** font-awesome icons ************************** -->
+                            <i class="fa fa-google fa-2x"></i>
+                            <i class="fa fa-facebook-square fa-2x"></i>
+                            <i class="fa fa-instagram fa-2x"></i>
+                            <i class="fa fa-youtube-square fa-2x"></i>
+                            <i class="fa fa-twitter-square fa-2x"></i>
+                            <i class="fa fa-google-plus-square fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 ">
+                        <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                        <div class="person">
+                            <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                            <img class="img-circle" src="images/Nile1.jpg" alt="NileImage">
+                            <!-- هحط فيه اسم الشخص اللي قال رايه عن الموقع h3 فهعمل  -->
+                            <h3>Shimma ElTokhey</h3>
+                            <!-- هكتب فيه نبذه عن كل شخص <p> هعمل -->
+                            <p>This is Ahmed ELTokhey who is the amazing Hackers with much knowledge in hacking </p>
+                            <!-- **************************** font-awesome icons ************************** -->
+                            <i class="fa fa-google fa-2x"></i>
+                            <i class="fa fa-facebook-square fa-2x"></i>
+                            <i class="fa fa-instagram fa-2x"></i>
+                            <i class="fa fa-youtube-square fa-2x"></i>
+                            <i class="fa fa-twitter-square fa-2x"></i>
+                            <i class="fa fa-google-plus-square fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                        <div class="person">
+                            <!--  فهيخلي الديف في شكل دائرة border-radius:50% بيقوم بعمل class="img-circle" الكلاس اللي اسمه -->
+                            <img class="img-circle" src="images/Nile1.jpg" alt="NileImage">
+                            <!-- هحط فيه اسم الشخص اللي قال رايه عن الموقع h3 فهعمل  -->
+                            <h3>Eman ElTokhey</h3>
+                            <!-- هكتب فيه نبذه عن كل شخص <p> هعمل -->
+                            <p>This is Eman ELTokhey who is the amazing Hackers with much knowledge in hacking </p>
+                            <!--  <i class="fa iconName"></i> ثم هحط بعده اسم الايقونة حيث التاج بتاع الايقونة اسمه font awesome وهو اختصار ل  fa حيث الكلاس الاساسي هو ال
+                ولكن الايقونة حجمها صغير فعندي الاحجام مترتبه كالاتي <i class="fa fa-iconName-square"></i> حيث ممكن اخلي الايقونة داخل مريع فهيكون اسم الايقونة كالاتي 
+                fa-lg : حجم صغير
+                fa-2x : = 2 fa-lg حيث ضعف الحجم الاصلي 
+                fa-3x : = 3 fa-lg حيث ثلاث اضعاف الحجم الاصلي 
+                fa-4x : = 4 fa-lg حيث  اربع اضعاف الحجم الاصلي 
+
+       -->
+                            <i class="fa fa-google fa-lg"></i>
+                            <i class="fa fa-facebook- fa-lg"></i>
+                            <i class="fa fa-instagram fa-lg"></i>
+                            <i class="fa fa-youtube fa-lg"></i>
+                            <i class="fa fa-twitter fa-lg"></i>
+                            <i class="fa fa-yahoo fa-lg"></i>
+                            <i class="fa fa-google-plus fa-lg"></i>
+                        </div>
+                    </div>
+                    <!--  عشان هستخدم بعض الايقوانات اللي بداحل هذه المكتبة font-awesome هنستخدم مكتبة ال -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ***************************************** End our Team section ****************************************** -->
+    <!-- ******************************** start subscribe section الاشتراك في القناة او الموقع ******************************* -->
+    <section class="subscribeSec text-center">
+        <div class="container">
+            <h1>Keep In Touch</h1>
+            <p class="lead">Sign Up for NewsLetter about spam we Hate it Too</p>
+            <!-- بينصق الكلام بشكل حلو وكويس lead هذا الكلاس اللي اسمه -->
+            <form class="form-inline">
+                <!--
+بتخلي العنصر ياخذ عرض الصفحة كله display:inline وبيخليها تكون في المنتصف الصفحة لان الخاصية بتاعت الclass="form-inline"هذا الكلاس بيخلي حقل الادخال ياخذ عرض الصفحة كلها 
+-->
+                <input class="form-control input-lg" type="text" placeholder="Write Your Email">
+                <!-- هيقوم العميل بكتابة الايمل بتاعه في حقل الادخال هشان يشترك في الموقع -->
+                <!--  بتاع حقل الادخال font-size وال padding-top,bottom بيزود الارتفاع وال input-lg الكلاس اللي اسمه -->
+                <button class="btn btn-danger btn-lg"><i class="fa fa-edit fa-lg"></i>Subscribe</button>
+                <!-- fa-lg وهكبر حجمها عن طريق الكلاس اللي اسمه <i class="fa fa-edit fa-lg"></i> هحط جنب الزرار ايقونة القلم اللي اسمها  -->
+                <!--  بتاع الزرار font-size وال padding-top,bottom بيزود الارتفاع وال btn-lg الكلاس اللي اسمه -->
+
+            </form>
+        </div>
+
+    </section>
+    <!-- ***************************************** End subscribe section *************************************** -->
+
+    <!-- ************************************ start statistics section ****************************************** 
+ده عبارة عن جزء الاحصاءايات الخاصة بشركة مثلا حيث عدد العملاء وعدد المقالات اللي في الموقع 
+                                                 عشان اعمل خلفية شفافة فوق صورة فهحط خلفية شفافة فوق الصورة بحيث يظهر الصورة اللي وراءها
+************* -->
+    <section class="statisticsClass text-center">
+        <!-- container هذا الديف عبارة عن الخلفية الشفافة اللي هحطها فوق الديف اللي اسمه -->
+        <div class="dataClass">
+            <!-- بره عشان يوزع dataClass هيجمع المحتوي في منتصف الشاشة وهيسيب الحواف لانه بياخذ عرض 1170 فقط من عرض الصفحة فعشان كده حطيت الديف اللي اللي اسم الكلاس بتاعه 
+                   عشان ياخذ عرض الصفحة كلها  <div class="container">الصورة علي الشاشة كلها وعشان اعرف اعمل خلفية شفافة فوق الصورة فحطيت الخلفية الشفافة بره ال  
+    -->
+            <div class="container">
+                <h1>Our statistics</h1>
+                <!-- حيث هحط اربع احصاياءات في حالة الشاشات الكبيرة Grid system هبدا اقسم الصفحة بتاعتي الي -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <!-- مش هعرف انسفه class="col-lg-3 col-md-6 col-xs-12 " دلوقتي انا هعمل ديف لكل احصاءية عشان اعرف اعمل لها تنسيقات لان الكلاس اللي اسمه -->
+                        <div class="stats">
+                            <i class="fa fa-users  fa-5x"></i>
+                            <!-- fa-5x وهعطيها اكبر حجم وهو users هحط الايقونة الخاصة بال-->
+                            <p>950,000</p> <!-- بكتب فيه العدد ذي عدد مستخدمين الموقع <p> </p> هذا ال -->
+                            <span>satisfied Users</span>
+                            <!-- هذه السبام بتوضح العدد اللي تحت كل ايقونة بيعبر عن ايه  -->
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="stats">
+                            <i class="fa fa-comments  fa-5x"></i>
+                            <p>800,000</p>
+                            <!-- بكتب فيه العدد ذي عدد مستخدمين اللي كتبوا تعليقات علي الموقع <p> </p> هذا ال-->
+                            <span>Posted Comments</span>
+                            <!-- هذه السبام بتوضح العدد اللي تحت كل ايقونة بيعبر عن ايه  -->
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="stats">
+                            <div class="fa fa-suitcase  fa-5x"></div>
+                            <!--شكل ايقونة الشنطة بيعبر عن المشاريع اللي الشركة عملتها -->
+                            <p>500,000</p> <!-- بكتب فيه العدد ذي عدد المشاريع اللي الشركة عملتها <p> </p> هذا ال-->
+                            <span>Projects Done</span> <!-- هذه السبام بتوضح العدد اللي تحت كل ايقونة بيعبر عن ايه  -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 ">
+                        <div class="stats">
+                            <div class="fa fa-support  fa-5x"></div>
+                            <!-- ايقونة العجلة بتعبر عن الدعم الفني والاصلاحات اللي قدمتها الشركة للعملاء -->
+                            <p>30,000</p>
+                            <!-- بكتب فيه العدد ذي عدد العملاء اللي الشركة قدمت لهم الدعم الفني <p> </p> هذا ال -->
+                            <span>Technical Support Tickets</span>
+                            <!-- هذه السبام بتوضح العدد اللي تحت كل ايقونة بيعبر عن ايه  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****************************** End statistics section ده عبارة عن جزء الاحصاءايات الخاصة بالموقع ************************** -->
+    <!-- ******* start skills section progress bar ده عبارة عن جزء المهارات الخاصة بالشركة والنسبة المئوية لكل مهارة والنسبة المئوية همثلها باستخدم ال ************* -->
+    <section class="ourSkills">
+        <div class="container">
+            <h1 class="text-center">Our Skills</h1> <!-- عشان العنوان يكون في منتصف السكشن -->
+            <!-- والمهارة هتاخذ 6 وال 1 المتبقي هيكون فاصل grid system هياخذ 5 من ال progress bar هيتم تقسيم الصف بحيث هيكون فيه علي الشمال المهارة وعلي اليمين النسبة الئوية للمهارة فال-->
+            <div class="row">
+                <!--****************************** The first skill ****************************************** -->
+                <!-- start The first progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                <div class="col-md-5">
+                    <!--هذا هيتم تطبيقه علي الشاشت المتوسطة والكبيرة لان الصغير بيتم تطبيقه علي كل اللي اكبر منه حيث البرجرس هياخذ 5 اعمدة -->
+                    <div class="progress">
+                        <!--ولكن لازم يكون بداخله عدد من الكلاسات container هذا الكلاس يعتبر هو ال progress ده عبارة عن كلاس جاهز بيمكني من عمل -->
+                        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                            Html5 / Css3
+                        </div>
+                        <!--danger , success من الكلاسات اللي بيظهر لي البروجرس بس ليه شوية قواعد اللي لازم اتبعها  حيث بيكون لون البروجرس نفس اللون الزرارير الجهزه ذي الprogress-bar الكلاس اللي اسمه 
+ ده بيحدد المنطقة حيث بيحدد البروجرس واقف فين وهيبدا من اين وهينتهي فين aria وده لازم اكتبه عشان شغلي يكون سليم وعندي كلاس اخري اسمه  progressbar بياخذ قيمة اسمها role وفيه كلاس  بحدد بيه القيمة اللي انا واقف عندها حاليا وعندي كمان كلاسان بيحددوا القيمة او اقل قيمة للبروجرس واقصي قيمة او اكبر قيمة aria-valuenow  وبيحدد البروجرس واقف فين الان  حيث فيه كلاس اسمه 
+ 80% وهخلي عرض البروجرس عبارة عن aria-valuemax="100"  , aria-valuemin="0" حيث  progress هيوصل لها ال
+من العرض الاصلي 
+**************************************************************************************************************************
+active متحرك هضيف له كلاس اسمه progress-bar مخطط ولو عايز اخلي ال progress-bar حيث بيكون عبارة عن progress-bar-striped اسمه progress-barويوجد نوع من 
+default-progress-bar العادي يعني هذا هو ال progress-bar ده ال
+<div class="progress-bar "
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="width:80%">
+                     Test
+                </div>
+************************
+**********************************************************************************************-->
+                    </div>
+                    <!-- End The first progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <!-- start The second progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <div class="progress">
+                        <!--ولكن لازم يكون بداخله عدد من الكلاسات container هذا الكلاس يعتبر هو ال progress ده عبارة عن كلاس جاهز بيمكني من عمل -->
+                        <div class="progress-bar progress-bar-primary progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            PHP / MySQl
+                        </div>
+                    </div>
+                    <!-- End The first progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <!-- start The second progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <div class="progress">
+                        <!--ولكن لازم يكون بداخله عدد من الكلاسات container هذا الكلاس يعتبر هو ال progress ده عبارة عن كلاس جاهز بيمكني من عمل -->
+                        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar"
+                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                            JavaScript / JQuery
+                        </div>
+                    </div>
+                    <!-- End The second progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <!-- start The Third progress skills هنا هكتب النسبة المئوية لكل مهارة  -->
+                    <div class="progress">
+                        <!--ولكن لازم يكون بداخله عدد من الكلاسات container هذا الكلاس يعتبر هو ال progress ده عبارة عن كلاس جاهز بيمكني من عمل -->
+                        <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar"
+                            aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                            WordPress
+                        </div>
+                    </div>
+                </div>
+                <!-- End progress skills  -->
+                <!-- start skill info هنا هكتب المهارة -->
+                <div class="col-md-6 col-md-offset-1">
+                    <!--
+هذا هيتم تطبيقه علي الشاشت المتوسطة والكبيرة لان الصغير بيتم تطبيقه علي كل اللي اكبر منه حيث البرجرس هياخذ 6 اعمدة وباقي الشاشت كل جزء من الجزان هياخذ 12 عمود فهيظهروا تحت بعض   
+ثم هيبدا من ناحية الشمال بس مش من البداية ولكن بعد البداية بعمود عشان يكون فيه مسافة بين النسبة و المهارة بتعتها 
+            -->
+                    <div class="skillsInfo">
+                        <h3>About The Team</h3>
+                        <p class="lead">
+                            We are specialized Designing and programming Team passionate About Web Design and creating
+                            digital Ideas We will transfer Your Idea To A Digital Dream and make our wish come True
+                        </p>
+                        <button type="button" class="btn btn-primary">Talk With A Professional</button>
+                    </div>
+                </div>
+                <!-- End skill info -->
+            </div>
+        </div>
+    </section>
+    <!-- ****************************** End skills section ده عبارة عن جزء المهارات الخاصة بالشركة والنسبة المئوية لكل مهارة ************************ -->
+    <!-- ************************ start contact Us section عبارة عن فورم يستطيع العميل التواصل مع الشركة صاحبة الموقع من خلالها ***************** -->
+    <section class="contactUs text-center">
+        <!-- هيخلي محتوي السكشن في المنتصف يعني اي كلام داخل السكشن هيكون في المنتصف -->
+        <div class="outContainer">
+            <div class="container">
+                <div class="row">
+                    <!-- Grid system عشان هحتاج ال -->
+                    <i class="fa fa-headphones fa-5x"></i>
+                    <!-- ايقونة شبه سماعات الاذن وهخليها اكبر حجم يعني هضبط الايقونة علي اكبر حجم لها -->
+                    <h1>Tell Us What You Feel</h1>
+                    <p class="lead">Feel Free To Contact Us Anytime</p>
+                    <!-- start Contact Form : هعمل فورم للتواصل العميل مع الشركة  -->
+                    <form role="form">
+                        <!-- role ="form" كل فورم ليها -->
+                        <!--
+    margin-bottom:15pxحيث input-field حيث بيعمل مسافة اسفل كل form-group وهحطهم داخل ديف واخد كلاس اسمه  input field ثم بحط بجوارها label في البوتستراب بحط -->
+                        <div class="col-md-6">
+                            <!--كل ديف هياخذ ثلاث اعمدة من كل صف -->
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="User Name">
+                                <!-- عشان يكبر حجم حقل الادخال input-lg ده عبارة عن كلاس جاهز في البوتستراب والكلاس  -->
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Email">
+                                <!-- ده عبارة عن كلاس جاهز في البوتستراب -->
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" placeholder="Cell Phone">
+                                <!-- ده عبارة عن كلاس جاهز في البوتستراب -->
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- اللي هكتب فيه الرسالة والزرار text-area الثلاث اعمدة الاخري هحجزها لل -->
+                            <div class="form-group">
+                                <textarea class="form-control input-lg" placeholder="Enter Your Message"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-danger btn-block">Contact Us</button>
+                            <!--  بيخلي الزرار ياخذ العرض المحدد له كله يعني هياخذ الثلاث اعمدة كلها btn-block عشان الزرار يكون كبير والكلاس اللي اسمه btn-lg الكلاس -->
+                        </div>
+                    </form>
+                    <!-- End Contact Form -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ********************** End contact Us sectionعبارة عن فورم يستطيع العميل التواصل مع الشركة صاحبة الموقع من خلاله ا ************************ -->
+    <!-- ********************** start Our Clients section هحط في هذا السكشن صور العملاء  ************************ -->
+    <section class="clientClass">
+        <div class="container">
+            <div class="row">
+                <!-- حيث هقسم الصف الي 4 صور في حالة الشاشات الكبيرة Grid System همشي بنظام ال -->
+                <!-- هجط مجموعة الصور في صورة قائمة غير مرتبة -->
+                <ul class="list-unstyled">
+                    <!--حيث عندي 6 صور unordered list بتاع ال  style بيلغي ال list-unstyled حيث الكلاس اللي اسمه -->
+                    <li class="col-md-2 col-xs-4">
+                        <!--في حالة الشاشات المتوسطة والكبيرة هيكون الصف فيه 6 صور وفي الشاشات الصغيرة هيكون عندي 3 صور -->
+                        <img class="img-responsive center-block" src="images/techradar.PNG" alt="pic1">
+                        <!-- 
+center-block اللي الصورة موجودة بداخله والكلاس اللي اسمه box يعني الصورة تصغر لما اصغر ال responsive بتخلي الصورة تكون img-responsive الكلاس اللي اسمه 
+  margin-right:auto وال  margin-left:auto بيخلي الصورة في منتصف الصندوق بتعها حيث بيعمل   
+-->
+                    </li>
+                    <li class="col-md-2 col-xs-4">
+                        <img class="img-responsive center-block" src="images/BBC.PNG" alt="pic2">
+                    </li>
+                    <li class="col-md-2 col-xs-4">
+                        <img class="img-responsive center-block" src="images/CISCO.PNG" alt="pic3">
+                    </li>
+                    <li class="col-md-2 col-xs-4">
+                        <img class="img-responsive center-block" src="images/Forbes.PNG" alt="pic4">
+                    </li>
+                    <li class="col-md-2 col-xs-4">
+                        <img class="img-responsive center-block" src="images/Wsj.PNG" alt="pic5">
+                    </li>
+                    <li class="col-md-2 col-xs-4">
+                        <img class="img-responsive center-block" src="images/facebook.PNG" alt="pic6">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ********************** End Our Clients section  ************************ -->
+    <!-- **************************************** start Footer Section *******************************************-->
+    <section class="footerClass">
+        <div class="container">
+            <div class="row">
+                <!--حيث فيه اللينكات وروابط الموقع والجزء الثاني عبارة عن اخر مقالات في الموقع والجزء الثالث عبارة عن صور SiteMap هيكون عبارة عن ثلاث اجزاء في الصف حيث الجزء الاول عبارة عن ال  
+الاخر المقالات  
+-->
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <!-- ***************************** start siteMap هيكون فيه لينكات بتاعت الموقع *************************************** -->
+                    <h3>SiteMap</h3>
+                    <ul class="list-unstyled three-column">
+                        <!-- three-column بواسطة البوتستراب وهعطي اسم كلاس جديد عشان اعدل فيها برحتي اسمه  <ul> اللي كان معمول لل style عشان الغي ال -->
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Company</li>
+                        <li>Design</li>
+                        <li>Code</li>
+                        <li>Host</li>
+                        <li>Solutions</li>
+                        <li>Si teMap</li>
+                        <li>Contact</li>
+                    </ul>
+                    <!-- قائمة المواقع الاجتماعية  -->
+                    <ul class="list-unstyled socilaIcon">
+                        <!-- هعطيه اسم كلاس جديد عشان اعدل فيها -->
+                        <li> <img src="images/facebookCircleIcon.png"> </li> <!-- عشان الايقونة تكون داخل دائرة -->
+                        <li> <img src="images/instegramCircleIcon.png"> </li>
+                        <li> <img src="images/ringCircleIcon.png"> </li>
+                        <li> <img src="images/gmail.PNG"> </li>
+                        <li> <img src="images/twitterCircleIcon.png"> </li>
+                        <li> <img src="images/skype.PNG"> </li>
+
+                    </ul>
+                </div>
+                <!-- ***************************** End siteMap هيكون فيه لينكات بتاعت الموقع *************************************** -->
+                <!-- ************** start Latest Articles عبارة عن صورة من المقال وجنبها العنوان وتحتها جزء من المقال ************************** -->
+                <div class="col-lg-4 col-md-6  col-xs-12">
+                    <!-- حيث هيكون عندي ثلاث مقالات بالصور والعنوان والنص بتعهم بحيث كل واحد هياخذ اربع عمدة من كل صف  -->
+                    <h3> Latest Articles</h3>
+                    <!-- ******************* First Article ******************************************************* -->
+                    <div class="media">
+                        <!-- media اللي بيمكن بداخله ال container ده عبارة عن ال -->
+                        <a class="pull-left" href="#">
+                            <i class="fa fa-calculator media-object"></i>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Programming</h4>
+                            This is some Text About Programming Describe the media of Bootstrap 3.2.0
+                        </div>
+                    </div>
+                    <!-- ************************************ Second Article *************************************** -->
+                    <div class="media">
+                        <!-- media اللي بيمكن بداخله ال container ده عبارة عن ال -->
+                        <a class="pull-left" href="#">
+                            <i class="fa fa-cloud media-object"></i>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Coding</h4>
+                            <p>This is some Text About Programming Describe the media of Bootstrap 3.2.0 </p>
+                        </div>
+                    </div>
+                    <!-- **************************** Third Article *********************************** -->
+                    <div class="media">
+                        <!-- media اللي بيمكن بداخله ال container ده عبارة عن ال -->
+                        <a class="pull-left" href="#">
+                            <i class="fa fa-users media-object"></i>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Web Design</h4>
+                            <p>This is some Text About Programming Describe the media of Bootstrap 3.2.0 </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ************** End Latest Articles عبارة عن صورة من المقال وجنبها العنوان وتحتها جزء من المقال ************************** -->
+                <div class="col-md-4 smallScreenThumbnail">
+                    <h3>Our Awesome Work</h3>
+                    <!-- بيعطي خلفية بيضاء وبيخلي الصورة مصغرة img-thumbnail هحط اربع صور للاعمال اللي الشركة عملتها خلي بالك ان الكلاس -->
+                    <img class="img-thumbnail" src="images/login.png" alt="work1">
+                    <img class="img-thumbnail" src="images/login.png" alt="work2">
+                    <img class="img-thumbnail" src="images/login.png" alt="work3">
+                    <img class="img-thumbnail" src="images/login.png" alt="work4">
+
+                </div>
+            </div>
+            <!-- ************************End Latest Articles عبارة عن صورة من المقال وجنبها العنوان وتحتها جزء من المقال ********************** -->
+        </div>
+        <!-- ------------------------------copyRight part *************************************************** -->
+        <div class="copyrightClass text-center">
+            <!--  text-center عشان الكلام اللي داخل السكشن يجي في منتصف الصفحة-->
+            Copyright &copy; 2014 <span>Your Template Name</span>.inc
+        </div>
+    </section>
+    <!--************************* lesson39: End create Loading Screen ******************************************* -->
+    <!--************************* lesson40: start create scroll To Top Button ******************************** -->
+    <!-- ****************** عايز اعمل زرار بحيث لما اضغط عليه يطلعني لبداية الصفحة بدل ما استخدم البكرة **************** -->
+    <div id="scrollTop">
+        <i class="fa fa-chevron-up fa-3x"></i>
+    </div>
+    <!--************************* lesson40: End create scroll To Top Button  ***************************** -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/projectNavbar.js"></script>
+    <!-- WoW library -->
+    <script src="js/wow.min.js"></script>
+    <!-- Link and activate wow.js -->
+    <script> new WOW().init();  </script>
+</body>
+
+</html>

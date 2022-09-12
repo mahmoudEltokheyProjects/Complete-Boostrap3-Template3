@@ -1,0 +1,639 @@
+/* *************lesson42:cleanCssFile في هذا الملف هيتم تقليل عدد سطور الكود وتجميع كل العناصر اللي ليها نفس الخصائص مع بعض ***********/
+body
+{
+/*     overflow: scroll;  */
+    /*  البكرة من الصفحة وبعد مالصفحة تحمل وتخلص تحميل هشيل هذه الخاصية عشان يرجع يظهر البكرة عشان اعرف انزل لاسفل الموقع scroll عشان يخفي ال 
+     يعني في حالة ان فيه اي حاجة زيادة عن الجسم بتاع الصفحة سواء افقيا او راسيا هيظهر البكرة auto فهشيل الخاصية او اعطيه القيمة 
+    JQuery ودلوقتي هروح لملف ال 
+    */
+}
+     /********************************** Start overriding on bootstrap  **************************************
+    كل الكلام والكلاسات اللي تحت البوتستراب هيه اللي عملها مش انا ولكن بعدل عليها لكن الكلاسات اللي انا هعملها بتاعت العناصر اللي انا عملها بايدي هكتب الخواص بتاعتها فوق هذا التعليق 
+
+    هذا الملف هعدل فيه الخواص بتاعت العناصر الجهزه في البوتستراب مش هعدل في الملف الاصلي لان لو نزل اصدار جديد من البوتستراب وحدثت الملف بيه فكده التعديلات اللي انا عملتها هضيع
+                                                                         وهذا الملف هيتم استدعاه اخر حاجة خالص عشان يكون هوه اخر حاجة هتتنفذ 
+    */
+    /*   بتاعه بتاعه وهعدل فيه css وهحدد العنصر وهاخذ كود ال inspect فعمل Link With Class اللي اسم اللينك بتاعه  listItem اولا هعدل في الخواص بتاع */
+
+/***************************************** navbar properities *******************************************/
+/* link without class */
+.navbar-inverse .navbar-nav > .active > a , 
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus 
+{ margin-top:2px; }
+/* navbar links  هغيير لون كل اللينكات اللي في النافبار  */
+.navbar-inverse .navbar-nav > li > a      
+{
+    color:#FFF;   
+    /* هزود الحجم بتاع النافبار يعني الشريط اللي في اعلي الصفحة حيث هزود الهوامش الداخلية للنافبار فهزود الهوامش الداخلية بتاعت اللينكات اللي في النافبار */
+    padding-top: 20px;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+    margin-top:5px;
+}
+/* Increase the height of navbar هزود الحد الادني من الارتفاع بتاع النافبار  */
+.navbar { min-height:60px; }
+/* Brand style */
+.navbar-inverse .navbar-brand
+{
+    color:darkgoldenrod;
+    font-size:30px;
+    line-height:40px;
+}
+/* dropdown menu style  هغير لون الخلفية بتاعت القائمة بتاعت العناصر */
+.dropdown-menu
+{
+    background-color:#fff ;
+    min-width:250px; /* Incease the width of dripdown-menu هزود الحد الادني من العرض بتاع القائمة */
+}
+
+/* change the color of dropdown menu links هغير لون اللينكات اللي موجودة داخل القائمة يعني لون العناصر */
+.dropdown-menu > li > a
+{
+    color:#000;
+    /* change the padding of links */
+    padding:16px 20px ; /* padding-top , bottom =6px ; padding-right , left = 20px */
+    font-size:16px;
+    text-transform: capitalize;
+}
+/*     change the background-color of dropdown menu when hover :  
+       وهغير لون العناصر وهكبر حجم الخط hover هغير لون الخلفية بتاعت القائمة بتاعت العناصر لما احط الفارة عليها يعني لمل اعمل
+*/
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus
+{
+     font-size:20px;
+    /*   increase padding of <li>  when hover : هزود الهوامش الداخلية اللي في الناحية الشمال للعناصر بتاعت القائمة لما احط الفارة عليه بحيث لما احط الفارة علي عنصر يتم زحزحته 
+   بس هذه الخاصية عشان تشتغل علي كل المتصفحات لازم اعمل الخاصية مع كل المتصفحات transition ناحية اليمين بمقدار35 بيكسل بس عشان اخلي الحركة ناعمة عند النتقال من عنصر لاخر فهعمل 
+        كلها  prefix لازم احط ال
+    */
+     padding-left:35px;
+     color: #fff;
+     -webkit-transition: padding 0.5s ease;
+    /* عشان يشتغل علي الجوجل كروم حيث بحدد له الحاجة اللي هنفذ عليها الحركة والزمن اللي الحركة هتستغرقه ثم نوع الحركة */
+     -moz-transition:padding 0.5s ease ; /* mozilla fireFox عشان يشتغل علي ال */
+     -o-transition:padding 0.5s ease ; /* opera عشان يشتغل علي ال */
+     transition: padding 0.5s ease ; 
+}
+/* Change the color of dropdown menu divider هغير لون الحد الفاصل بين العناصر بتاعت القائمة */
+.dropdown-menu .divider
+{
+    background-color: black;
+    height:2px;                     /* عشان ازود ارتفاع الخط  */    
+}
+/* تبدا من الشمال لليمين dropdown menuتبدا من المنتصف يعني متظهرش من علي الشمال يعني ميحصلهاش ازاحة ناحية الشمال لان الموقع انجليزي فعايز ال dropdown menu عايز اخلي ال 
+           right:0;   left:auto;  وفي حالة المواقع العربية هخليها تبدا من اليمين للشمال  right:auto;   left:0;  وفي حالة المواقع الانجليزية هخليها تبدا الشمال لليمين  
+
+*/
+.navbar-right .dropdown-menu
+{
+    left:0;     /* القائمة هتكون ملتصق بالناحية الشمال يعني المسافة بين القائمة والناحية الشمال ب 0 */
+    right:auto;
+}
+/*navbar-toogle button:هخلي الزرار اللي بيظهر في اعلي يمين الصفحة في حالة شاشة الموبيل في منتصف الشريط حيث لو القائمة مفتوحة هيغلقها ولو مغلقة هيفتحها */
+.navbar-toggle
+{
+    margin-top:18px;
+}
+
+/******************************** slideShow(caruosel) properities ***************************/
+/* width and height of each image هكبر حجم الصورة حيث الارتفاع والعرض  */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img
+{
+    width:1550px;
+    height:490px;
+}
+/* carousel caption of images */
+.carousel-caption
+{
+    bottom:75px;
+    background-color:rgba(80,75,100,0.5);
+    padding-left:50px;
+    padding-right:20px;
+}
+/* carousel-indicators  حيث بينور الدائرة active الدوائر الصغيرة اللي تحت الصور بتاعت السليدر حيث ليه نوعان من الكلاسات واحد بيتم تنفيذه لما بحط الفارة علي احد الدوائر وهو ال 
+والكلاس الاخر بيعبر عن الوضع الافتراضي يعني بيتنفذ علي كل الدوائر الا الدائرة اللي مش حاطط عليها الفارة
+*/
+.carousel-indicators
+{
+    bottom:0px;  /* هحط الاربع نقاط في الاسفل يعني ملتصق بقاع السليدر  */
+}
+.carousel-indicators li 
+/*
+ <li></li> ده الكلاس الافتراضي اللي بيتنفذ علي كل الدوائر اللي مش حاطط الفارة عليها حيث هذه النقاط عبارة قائمة مرتبه مكونة من عدد من العناصر 
+active لازم اروح اعدل في الكلاس ال  active بس لو عدلت في الكلاس اللي مش border-radius=50% بس وخده <li></li>حيث الدائرة عبارة عن 
+ active وهتكون صغيرة مع الكلاس ال active عشان التعديل يسمع لان الدوائر هزداد ارتفاعها وعرضها فقط مع الكلاس اللي مش
+*/
+{ 
+   height:22px; /* ده ارتفاع كل دائرة دون وضع الفارة عليها */ 
+   width:22px; /* ده عرض كل دائرة دون وضع الفارة عليها*/
+}
+.carousel-indicators  .active
+{ 
+    height:23px; 
+    /* ده ارتفاع كل دائرة لما احط الفارة عليها  */ 
+    width:23px; 
+    /* ده عرض كل دائرة لما احط الفارة عليها */ }
+/*
+   hidden-xs كلاس اسمه caption فهعطي ال Extra small = xs في حالة الشاشات ال caption بيختفي في الاعلي فعايز اخفي ال caption فيه مشكلة في حالة تصغير الشاشة حيث ال 
+    عايز اتحكم في الوقت بتاع الانتقال من صورة لاخري يعني وقت عرض الصور فعن طريق ملف الجافا سكريبتفهعمل ملف جديد واعمل فيه التعديلات او اي حاجة جديدة عايز اضيفها
+            ده لو عايز اغير خلفية الزرارين
+.btn-danger 
+{
+  background-color:rgba(250,0,0,0); 
+}
+.btn-primary
+{
+  background-color:rgba(0,250,0,0);  
+}
+*/
+/*-------------------------------lesson#41: start retouch carousel image ------------------------------------*/
+.carousel-inner > .item > img , 
+.carousel-inner > .item > a > img
+{width: 100%;/*كله يعني ميكنش فيه جزء من الديف متغطي والجزء الاخر مكشوف carousel (slideShow) عشان لما اصغر الشاشة تكون الصورة تاخذ حجم ال */}
+/*-------------------------------lesson#41:End retouch carousel image ------------------------------------*/
+/******************************************** start option Box propertities **************************/
+.optionBoxClass
+{
+    margin-top:70px;
+    position: fixed; /* scroll عشان هذا السكشن يظل ثابت معايا مهما عملت */
+    top:100px;
+    left: 0;
+    /* z-indexحيث العنصر الاكبر في ال  z-index خلي بالك ان الايقونة لما بنزل بالبكرة بتختفي تحت السكاشن فعايز اخليها فوق كل السكاشن والديفات اللي في الصفحة فهعطيها اكبر
+    هو اللي هيظهر في الطبقة الاول يعني فوق كل العناصر */
+    z-index:9999; 
+    /* لان لو اعطيته 1 ممكن يكون فيه عناصر اخري اعلي منه ولكن لما اعطيه قيمة كبيرة فمن الصعب يكون في عناصر اعلي منه z-index ده اعلي رقم ممكن اعطيه لل */
+    cursor:pointer; /*   خلي الموشر علي شكل اليد optionBox يعني لما اشاور علي السكشن بتاع ال */
+}
+/******************* خصائص الديف اللي هيكون فيه الالون اللي هختار منها لون معين **********************************/
+.colorBox
+{
+    float:left;
+    color:#FFF;
+    background-color:#333;
+    padding:10px;
+    /* بحيث لما اضغط علي الايقونة يظهر option-box هخفي ال */
+    display:none; /* مخفي هيظهره ولو مخفي هظهره option-box يعني لو ال toggle لما اضغط علي الايقونة هعمل JQuery حيث في كود ال*/
+}
+/********************** هنسق العناصر بتاعت القائمة *****************************************/
+.optionBoxClass .colorBox ul li
+{
+  width:20px;
+  height:20px;
+  background-color:#F00;
+  display:inline-block; /*   عشان اعرف اعطيها خواص block مش inline-block عشان عناصر القائمة تكون علي سطر واحد وخلنها */
+  margin-right:3px; /* تسيب مسافة علي يمينها  li تبعد عن بعض عشان كل li عشان ال */
+} 
+/********************** هنسق الايقونة اللي هضغط عليها هتظهر لي القائمة بتاعت الالوان *****************************************/
+.optionBoxClass .gearCheck {  padding:5px; color:#FFF; }
+/************************** lesson37:Make style for Every Color *****************************
+colorBox لكل لون من الوان ال style مختلفة حيث هعمل ملف style هقسم الكود بتاعي لملفات 
+ وهيكون فيه كلdefault-color-themeخارجي هسميه style فهعمل ملف colorBox كامل فيه كل الالوان الخاص بالموقع اللي موجودة داخل ال style فدلوقتي هعمل ملف
+  بحيث لما العميلcss ملف colorBox في ال color يعني الالوان اللي لما العميل يفتح الموقع هيشفها حيث هعمل لكل default-color الالوان الاساسية بتاعت الموقع يعني ال
+ بتاع هذا اللون style هيتم استدعاء ملف ال colorBox يختار لون من ال
+*/
+/******************************************** End option Box propertities **************************/
+/* -------------------------------------- start about section properities ---------------------------------- */
+.about
+{
+    /* border:2px solid rgb(250,100,200); */
+    padding-top:100px;
+    padding-bottom:60px;
+}
+/* lead لان لو كتبت الكلاس اللي اسمه about اللي موجود بداخل السكشن اللي اسمه paragraph بس هعدل في ال lead هعدل في خصائص الكلاس اللي اسمه  
+            بشكل عام فهيعدل في كل النصوص اللي في الصفحة ولكن انا عايز اعدل في النص اللي في السكشن فقط 
+*/
+.about .lead { color:#888; font-size:25px; margin-top:15px; }
+.about h1 , 
+.about h4 
+{ font-weight: bold ;  font-size:27.5px; }
+/* -------------------------------------- End about section properities -------------------------------------- */
+.features
+{
+    /* border:2px solid green ; */
+    background-color:#EEE;
+    padding-top:10px;
+    padding-bottom:50px
+}
+.features .feat {  margin-bottom:10px; /* البعد بين كل ميزه واخري يعني بين كل ديف واخري  */ }
+/* feature هغير خصائص الايقونات حيث هكبر مثلا وهكذا وبما ان الايقونة عبارة عن خط فهكبر حجم الايقونة عن طريق تكبير حجم الخط وعشان احدد السبام اللي موجودة في السكشن بتاع ال 
+فحددت ان انا عايز كبر الايقونة بتاعت السبام
+*/
+.features .feat span.glyphicon
+{
+    font-size:25px;
+    margin-bottom:10px; /* المسافة بين الايقونة والعنوان اللي تحتها */
+    color:#000 ;  /* الايقونة عبارة عن خط فممكن اغير لونها عادي */
+}
+/* عن الايقونة our features هخلي كلمة  */
+.features h1 { margin-bottom:50px; }
+/* -------------------------------------- start Feature section properities ---------------------------------- */
+/***************************** Lesson16 : Start testimonials section  اراء الناس عن الموقع **************************/
+.testimonials
+{
+    /* border:2px solid yellow;  */
+    padding-top:50px;
+    padding-bottom:50px;
+}
+.testimonials h1{ font-weight:bold; margin-bottom:20px; }
+.testimonials  .lead  /*  اللي بداخل الديف paragraph ده ال */
+{  line-height:2em; /* two time from font size of page يعني هكبر حجم الخط لضعف الحجم بتاعه  */ }
+.testimonials .item span { font-size:16px; font-weight:bold; }
+/*
+عايز اخلي ال
+indicators بتاع ال  position لا يوثر علي ال paragraph بتاع ال  position تحت السبام اللي فيه اسم الناس اللي بيعطوا ارائهم عن الموقع وعايز ال indicators 
+position معمول لها indicators تحت السبام لان ال  indicators في الاخر بس ده مش هيخلي  ال  indicators فاول حاجة هحط ال 
+
+/* <!--   و السبام  <p> حيث بيحتوي علي ال  slider بتاع ال container هذا هو ال --> */
+.testimonials  .carousel-inner {  min-height:160px; }
+/*   indicators هعدل خصائص ال 
+1-  وده القيمة الافتراضية static فهخليه  absolute يكون  position مش هخلي ال
+*/
+.testimonials .carousel-indicators
+{
+    position: static;
+    width:100%;         /*  كلها frameworkياخذ العرض بتاع ال indicators هخلي ال */
+    margin-left: auto; /* في المنتصف indicators عشان اخلي ال */
+}
+/* اللي مش حاطط الفارة عليهم  indicators اللي بيمثل لي الدوائر بتاعت ال li ده ال  */
+.testimonials .carousel-indicators li
+{
+    text-indent:0;
+    width:80px;      /*   عرض كل دائرة حيث هحط بدل الدائرة صورةindicator عرض كل  */ 
+    height:80px;    /*  ارتفاع كل دائرة indicator ارتفاع كل   */ 
+    opacity:0.4;    /* عشان الصور تكون شفافة */
+    border-radius:50%;
+    border:3px solid #aaa;/*overflow: hidden; بس فيه جزء من الصورة هيخرج بره الدائرة فعايز اخفي الجزء اللي بيخرج بره الدائرة فهعمل <li></li>هعمل حدود لكل */
+    overflow: hidden;
+    /* margin فععمل  ol هعمل مسافة بين كل صورة والاخري او كل دائرة والاخري عشان لما بنتقل من دائرة لاخري بيحصل حركة بسيطة في ال */
+    margin:5px;
+    /*
+    وهطبقه علي كل انواع الحركة عشان الحركة تاخذ وقت يعني يكون فيه وقت في الانتقال من صورة لاخري مثلا 0.5 ثانية transition عايز اخلي الانتقال من صورة لاخري بنعومة فهعمل  */
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 1.5s ease;
+}
+/* active هخلي الشفافية بتاعت الصورة اللي واقف عليها بالفارة تكون ب 1 يعني هخليها هيه اللي ظهره يعني هيه ال  */
+.testimonials .carousel-indicators li.active
+{
+    /* not active نفس طول وعرض الصور والدوائر في حالة ال active عشان اتاكد ان المقاسات بتعتي سليمة فهخلي طول وعرض الصور او الدوائر اللي نوعها */
+     width:80px;      /*   عرض كل دائرة حيث هحط بدل الدائرة صورةindicator عرض كل  */ 
+     height:80px;    /*  ارتفاع كل دائرة indicator ارتفاع كل   */ 
+     opacity:1;
+    /*   هلغي الخلفية اللي باللون الاحمر اللي بتظهر لما الصورة اللي عليها الدور تتعرض */
+    background:none;
+}
+/* indicators اللي  موجودة في كل  الدوائر بتاعت ال img ده ال  */
+.testimonials .carousel-indicators li img{  max-width:100%;/* اللي هوه موجود بداخلها li معناها اقصي عرض لكل صورة عبارة عن عرض ال*/ }
+/* ****************************************  start price table section ************************************** */
+.tableSection { background-color:#DDD ; padding-top:40px ; padding-bottom:40px ; }
+.price_box         
+{
+    background-color:#FFF;
+    padding:10px;
+    border:2px solid #AAA;
+    margin-bottom:15px; 
+    /*  والاخري عشان ميكنوش ملتصقين ببعض في حالة الشاشات الصغيرة يعني اخلي فيه مسافة بين كل صندوق والاخري box  عشان اخلي فيه مسافة بين كل  */
+}
+.tableSection h1 {  margin-bottom: 40px; }
+.tableSection p
+{
+    font-size: 35px;
+    font-weight: bold;
+    width:100px;
+    height:100px;
+    background-color:#DDD;
+    border-radius:50%;
+    margin-bottom: 30px; /* box والدائرة تكبر يكون فيه مسافة بين الدائرة وباقي ال hover عشان يكون فيه مسافة اسفل الدائرة اللي فيها السعر عشان لما اعمل  */
+    line-height:100px; /* يكون في منتصف الدائرة  paragraph عشان ال */
+    /* يكون التاثير اللي هيحصل يكون ناعم box علي اي  hover عشان الحركة تكون ناعمه عشان لما اعمل  transition-duration هعمل  */
+    -webkit-transition-duration:0.5s;
+    -moz-transition-duration:0.5s;
+    -o-transition-duration:0.5s;
+    transition-duration:0.5s; 
+}
+.tableSection .price_box:hover p  
+/*  
+    360 deg حيث هخليه يكبر شوية ويلف حول نفسه paragraph هيعمل شوية خصائص علي ال boxes يعني لما احط الفارة علي احد ال  box علي ال  hover لما اعمل 
+                                                                                            وهعمل حدول حول الدائرة باللون الاحمر
+*/
+{
+    -webkit-transform:scale(1.5,1.5) rotate(360deg);
+    -moz-transform:scale(1.5,1.5)  rotate(360deg);
+    -o-transform:scale(1.5,1.5)  rotate(360deg);
+    transform:scale(1.5,1.5)  rotate(360deg);
+}
+.tableSection ul { line-height:45px; font-size:18px; }
+.tableSection a /* order Now بتاع الزرار اللي اسمه  style ده ال */ { margin-bottom:10px; }
+/* ****************************************  End price table section ************************************** */
+/* ***************************************** start our Team section **************************************** */
+/*  وهتكون عبارة عن صورة our-team بتاع ال  section هعمل خلفية لل */
+.ourTeam
+{
+     /* 
+        عشان الصورة ميحصلهاش تكرار no-repeat بتاع الصور وهعمل الصورة  folder خطوة ثم هدخل علي ال css هعمل نقطتين ثم سلاش عشان اخرج بره ملف ال 
+        background-image : url("imagePath") imagePosition  photoType جيث الشكل العام للخاصية بتاعت ال 
+        الصورة هتكون ثابته scroll ان مهما اعمل fixed  ان الصورة هتكون في المنتصف ومعني  center يعني الصورة مش هتتكرر ومعني  no-repeat حيث معني 
+    */
+       background : url("../images/orangeImage.png") no-repeat center center fixed ;
+      -webkit-background-size:cover;
+      -webkit-background-size:cover;
+      -webkit-background-size:cover;
+       background-size:cover;
+       min-height:600px;
+}
+/*  والصور بتاع اعضاء الفريق فهذا ال  h1 عايز اعمل خلفية شفافة وهكتب عليها كلام عشان يغطي علي الخلفية اللي وراء يعني علي الصورة اللي في الخلف فهعمل ديف وهحط فيه الكلام حيث هحط فيه ال
+containerعشان تخطي عليه فهحط ال container فبحطه بره ال container هيغطي علي جزء صغير من ال container عشان لو حطيته داخل ال container الديف المفروض احطه بره ال 
+       الاصلي container نفس ارتفاع ال inside_container  فعشان اخلي ال  container الكبير عشان ياخذ نفس حجم ال 
+*/
+.ourTeam .inside_container
+{
+    background-color:rgba(2,2,2,0);
+    min-height:600px; /*  container بتاع ال min-height  الاصلي فهعطيه نفس ال container نفس ارتفاع ال inside_container  فعشان اخلي ال */
+    padding-top:40px;      /*   paragraph عشان اخلي فيه مسافة اعلي العنوان وال  */
+    padding-bottom:40px;   /*   paragraph عشان اخلي فيه مسافة اسفل العنوان وال  */
+}
+.ourTeam .inside_container h3 {  margin-bottom:30px; /* عشان اخلي فيه مسافة اسفل العنوان */ color:white; }
+.ourTeam .inside_container p { font-size:16px; font-weight:bold; }
+.ourTeam .inside_container .person {  margin-bottom:40px; /* عشان اعمل مسافة اسفل كل ديف يعني مسافة اسفل الديف بتاع كل شخص  */  }
+/* ***************************************** End our Team section **************************************** */
+ /* ******************************* start subscribe section الاشتراك في القناة او الموقع ******************************* */
+/* section properities */
+.subscribeSec 
+{
+    background-color:#CCC;
+    padding-top:40px;
+    padding-bottom:40px;   
+}
+/*  header section properities */
+.subscribeSec h1
+{
+   color:#888;
+   letter-spacing:2px; /* المسافة بين الحروف اللي في العنوان بتاع الصفحة */
+   margin-bottom:20px;
+}
+/*  paragraph section properities */
+.subscribeSec p {  margin-bottom:30px;   }
+/* input field properities : border-radius مش عايز حقل الادخال يكون له */
+.subscribeSec .form-control
+{
+    border-radius:0; /* في الحواف بتاعت حقل الادخال curve عشان ميكنش فيه  */
+    width:300px;
+    margin-right:0px; /* عشان اخلي حقل الادخال ملتصق باللزرار*/
+}
+/* button properities */
+.subscribeSec button{  border-radius:0px; /* في الحواف بتاعت حقل الزرار curve عشان ميكنش فيه  */ }
+/*  ******************************** End subscribe section الاشتراك في القناة او الموقع ******************************* 
+ عشان اعمل خلفية شفافة فوق صورة فهحط خلفية شفافة فوق الصورة بحيث يظهر الصورة اللي وراءها
+ --------------------------------------------- start statistics section -------------------------------------  */
+.statisticsClass
+{  
+  margin-top:0px;
+  background:url("../images/egypt-visit-8.jpg") no-repeat center center fixed;
+/*prefixes اللي لازم اعمل لها css3 عبارة عن خاصية من خصائص الbackground-sizeبعمل كده عشان لما اصغر الشاشة الصورة اللي في الخلف تاخذ العرض بتاع الشاشة كلها فهخليها كغلاف وال
+    اللي فيها خلفيات عشان الخلفية او الصورة تاخذ العرض كله sections وهستخدم هذا الكلام مع كل ال
+ */
+  -webkit-background-size:cover;
+  -webkit-background-size:cover;
+  -webkit-background-size:cover;
+   background-size:cover;
+  min-height:300px; /* اقل طول للديف */
+  width:100%; /* عشان ياخذ العرض المحدد له كله يعني عرض الشاشة كلها */
+}
+.statisticsClass .dataClass
+{
+    background-color:rgba(2,2,2,0.7);
+    color:#B6B5B5;
+    min-height:300px; /* عشان ياخذ طول الديف كله */
+    padding-top:40px;
+    padding-bottom:40px;
+}
+.statisticsClass h1 { margin-bottom:60px; }
+.statisticsClass  .dataClass  .stats
+{
+    /* عشان اخلي الحركة او التغيير اللي هيحصل بشكل اكثر نعومة يعني التغيير ميحصلش فجاءة ولكن بعد فترة زمنية معينة وليكن 0.5 ثانية */
+    /*  عشان المتصفحات تتعرف علي هذه الخواص css3 يعمل كده مع اي خاصية من خواص ال */
+    -webkit-transition:all 0.5s ease-in-out ; 
+    /*معناها انه هيطبق هذا علي اي حركة خلال نصف ثانية عند وضع الفارة علي العنصر وعن سحب الفارة من علي العنصر */
+    -o-transition:all 0.5s ease-in-out ;
+    -moz-transition:all 0.5s ease-in-out ;
+    transition:all 0.5s ease-in-out ;
+    /*هخلي فيه مسافة بين كل صندوق ولاخر في حالة الشاشت الصغيرة حيث هيكون فيه مسافة بين كل عنصر من عناصر الصف في حالة الشاشت الصغيرة والعناصر تيجي جنب بعض */
+    margin-bottom:30px;
+}
+.statisticsClass  .dataClass  .stats:hover
+{
+    /* font حيث الايقونة عبارة عن  <i> , <p> , <span> عايز لما احط الفارة عليه يخلي اللون بتاع  الكلام اللي داخل هذا الديف ابيض يعني لون ال */
+    color:#FFF;
+}
+.statisticsClass p
+{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom: 0; /* ميكنش فيه تحته مسافة وعشان اخليه ملتصق بالسبام paragraph عشان ال */
+}
+.statisticsClass span { font-size:18px; }
+/* --------------------------------------------- End statistics section -------------------------------------  */
+/* *************** Start skills section ده عبارة عن جزء المهارات الخاصة بالشركة والنسبة المئوية لكل مهارة *********************** */
+/*  the main section properities */
+.ourSkills
+{
+   padding-top:40px;
+   padding-bottom:40px;
+   background-color:#DDD;
+}
+/*  the h1  properities */
+.ourSkills h1 {  margin-bottom:60px; /* عشان يكون فيه مسافة اسفل العنوان */ }
+/*  the h3  properities */
+.ourSkills h3
+{
+    font-weight: bold;  /* عشان يكون الخط عريض */
+    margin-top:0px; /*  progress-bar عشان يكون بمحاذاة ال h3 عشان ميكنش فيه مسافة اعلي ال  */
+}
+/*  the progress bar properities but only the progress-bar which inside skills section */
+.progress { height:37px; }
+.ourSkills .progress-bar  /* وهكبر حجم الخط  progress-barحيث هخلي الكلام في منتصف ال progress-bar هتحكم في الكلام اللي موجود داخل ال*/
+{
+    line-height:36px;
+    font-size:15px;
+    font-weight:bold;
+    text-align: left;
+/*  يكون في اقصي اليسار يعني بداء من الشمال لليمين ولكن هيكون ملتصق بالجانب الشمال فهبعد عن الجنب الشمال بمقدار 10 بيكسل عن طريق ال progress-bar عشان اخلي الكلام اللي بداخل ال */
+    text-indent:10px;
+}
+/* ******************** End skills section ده عبارة عن جزء المهارات الخاصة بالشركة والنسبة المئوية لكل مهارة *************** */
+/* ***************** start contact Us section عبارة عن فورم يستطيع العميل التواصل مع الشركة صاحبة الموقع من خلالها *****************  */
+.contactUs
+{
+   background:url("../images/egypt-visit-8.jpg") no-repeat center center fixed;
+  -webkit-background-size:cover;
+  -webkit-background-size:cover;
+  -webkit-background-size:cover;
+   background-size:cover;
+   min-height:300px;
+}
+.contactUs .outContainer
+{
+    background-color:rgba(2,2,2,0.7);
+    min-height:300px;
+    color:#DDD;
+    padding-top:40px;
+    padding-bottom:40px;
+}
+.contactUs .outContainer .container  p {  margin-bottom:50px; /*  form وال <p> </p> هعمل مسافة بين ال */ }
+.contactUs .outContainer .container  form textarea { height:117px; }
+/* عايز اخلي لون المحتوي بتعها اسود text-area وال input-text جميع ال */
+.contactUs .outContainer .container form input[type="text"] , 
+.contactUs .outContainer .container form textarea
+{
+    /* dark لون  textarea عشان اخلي حقول الادخال وال */
+    background-color:rgba(82,78,78,0.7);  /* لون الخلفية اللي بداخل حقول الادخال */
+    color:#FFF;  /* لون الكلام اللي بداخل حقول الادخال هيكون ابيض */
+    border:none;  /* مش عايز اخلي فيه حدود لحقل الادخال */
+}
+/* ****************** End contact Us section عبارة عن فورم يستطيع العميل التواصل مع الشركة صاحبة الموقع من خلالها ***************** */
+/*  ********************** start Our Clients section هحط في هذا السكشن صور العملاء  ************************ */
+.clientClass
+{
+    padding-top:40px;
+    padding-bottom:40px;
+    background-color:#EEE;
+}
+.clientClass img
+{
+   opacity:0.4;  
+   filter:alpha(opacity=40);
+    /*  حيث هي ال 0.4 عشان يتعرف عليها alpha(opacity=40) حيث ال  internet Explorer خاصة بال  opacity هعمل  */
+   margin-top:20px;
+   margin-bottom:20px;
+}
+.clientClass img:hover
+{
+    opacity:1;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+     transition:all 0.5s ease-in-out;
+}
+/*  ********************** End Our Clients section هحط في هذا السكشن صور العملاء  ************************ */
+/* ****************************************** start Footer Section ******************************************* */
+.footerClass
+{
+    background-color:#111;
+    color:#AAA;
+    padding-top:10px;
+}
+.footerClass a { color:#AAA; }
+.footerClass a:hover  /* لما احط الفارة علي اللينك */ { color:#FFF; }
+.footerClass h3
+{
+    
+    letter-spacing:1px; /*  المسافة بين الحروف بتاعت العنوان */
+    margin:30px 0 20px 0 ;
+    /* margin : top right bottom left; بتساوي 30 بيكسل وتحتها 20 بيكسل وعلي ليمين والشمال 0 بيكسل SiteMap هخلي المسافة فوق ال  */
+   
+}
+.footerClass  .three-column   /* فتم اعطاء اسم كلاس جديد SiteMap عايز اخلي ثلاث لينكات في كل صف في الجزء بتاع */
+{ overflow:hidden; /* يختفي SiteMap عشان الكلام الزيادة عن الصندوق بتاع ال */ }
+.footerClass  .three-column  li 
+{
+    width:30%; /*  SiteMap تاخذ ثلث عرض الصندوق بتاع ال  li عشان اخلي كل */
+    float: left; /* عشان اللينكات تبداء من الشمال لليمين */
+    padding:5px  0px ; /* padding : top bottom right left */
+}
+.footerClass  ul img
+{
+    border-radius:50%;
+    margin:20px 0px 10px ;
+    width:48px;
+    height:48px;
+}
+.footerClass .socilaIcon   li
+{  
+    float:left; /* عشان الايقونات يبداوا من الشمال لليمين */
+    margin-right:5px; /* عشان يكون فيه مسافة بين كل ايقونة والاخري فهيسيب مسافة 10 بيكسل علي يمين كل ايقونة */
+    opacity:0.5; /* تنور hover هخلي الصورة مظلمة عشان لما اعمل عليها */
+    filter:alpha(opacity=70); 
+    /* internet-Explorer تنور ٍعشان الخاصية بتاعت الشفافية تشتغل في المتصفح اللي اسمه hover هخلي الصورة مظلمة عشان لما اعمل عليها */
+}
+.footerClass .socilaIcon  li:hover /* لما احط الفارة علي الايقونات */
+{
+    opacity:1; /* عشان الايقونة اللي هحط عليها الفارة تنور */
+    /* عشان تاثير تغيير الشفافية من المظلم للنور يكون تاثير بنعومة فهخلي فيه وقت بين الانتقال من الايقونة المظلمة للايقونة المنورة */   
+    filter:alpha(opacity=100);
+    -webkit-transition:all 0.7s ease-in-out;
+    -moz-transition:all 0.7s ease-in-out;
+    -o-transition:all 0.7s ease-in-out;
+    transition:all 0.7s ease-in-out;
+}
+/* ******************************************  End Footer Section ******************************************* */
+/*  ******************************************* start Article ************************************************* */
+.footerClass  .img-thumbnail  
+/* Footer اللي موجود في ال img-thumbnail بتاع الصورة وهعدل في ال img-thumbnail هعدل في الكلاس الجاهز في البوتستراب اللي اسمه */
+{ 
+   background:rgba(0,0,0,0.5);  /* خلفية كل صورة */
+   border:2px solid #777;  /* حدود كل صورة */
+   margin-bottom:5px; /* عشان في حالة الشاشات الصغيرة والصور تكون تحت بعض متكنش ملتصقة ببعض يعني يكون فيه مسافة اسفل كل صورة */
+   width:150px;
+   height:100px;
+}
+/* ----------------------------------- latest Article خصائص الايقونات بتاعت ال --------------------------------------  */
+.footerClass .media .fa  {  font-size:60px ; color:limegreen ; }
+/****************************** copyright properities *******************************************/
+.footerClass  .copyrightClass
+{
+    background-color: #333;
+    color:#AAA;
+    padding:15px 0; /* padding : top bottom right left */
+    margin-top:10px;    
+    font-size:18px;
+}
+/*  ******************************************* End latest Article ************************************** */
+/*  ***************************************** start copyright ************************************** */
+.navbar-inverse .navbar-nav > .active > a , 
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus ,
+/***************************************** navbar properities *******************************************/
+/*  change the background-color of dropdown menu when hover :  */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+/******************************** slideShow(caruosel) properities ***************************/
+.carousel-indicators  .active { background-color:#E41B17; }
+ /***************************************** navbar properities *****************************************/
+/* brand name اللي موجودة في ال span هغير لون ال */
+.navbar-brand span { color:#E41B17; }
+/* ****************************************  start price table section ************************************** */
+.tableSection .price_box:hover p  {  border:2px solid #E41B17; }
+/******************************* خصائص الديف اللي هيكون فيه الالون اللي هختار منها لون معين **********************************/
+.colorBox {  border:4px solid  #E41B17 ; }
+/********************** هنسق الايقونة اللي هضغط عليها هتظهر لي القائمة بتاعت الالوان *****************************************/
+.optionBoxClass .gearCheck { background-color:#E41B17; }
+/* -------------------------------------- start about section properities ---------------------------------- */
+/* للون الاحمر header هغير لون السبام اللي بداخل ال */
+.about h1 span , .about h4 span {  color:#E41B17; }
+/***************************** Lesson16 : Start testimonials section  اراء الناس عن الموقع **************************/
+.testimonials .item span {  color: #E41B17; }
+ /* active هخلي الشفافية بتاعت الصورة اللي واقف عليها بالفارة تكون ب 1 يعني هخليها هيه اللي ظهره يعني هيه ال  */
+.testimonials .carousel-indicators li.active { border:3px solid #E41B17; }
+/* ****************************************** start Footer Section ******************************************* */
+.footerClass h3 { color:#E41B17; }
+/*  ***************************************** start copyright ************************************** */
+.footerClass  .copyrightClass span{ color:#E41B17; }
+/************************End default-color-theme style file properities *************************/
+/* ************************ lesson40: start create scroll To Top Button ***************************/
+#scrollTop
+{
+    position:fixed;
+    right:15px;
+    bottom:10px;
+    /* border:2px solid #f00;  */
+    padding:15px;
+    color:#DDD;
+    background-color:#272727;  
+    display:none;                /* JQuery هخفي الزرار عشان هظهره بال */
+    cursor:pointer;
+}
+#scrollTop:hover {  background-color:#666; }
+/* ************************ lesson40: End create scroll To Top Button ***************************/
